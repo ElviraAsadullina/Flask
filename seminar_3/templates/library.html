@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Library
+{% endblock %}
+
+{% block content %}
+    <h2>List of books</h2>
+    <div class="row">
+        {% for item in library %}
+            <p class="col-12 col-md-6">Id: {{ item.id }}<br>Name: {{ item.name }}<br>
+            Publication year: {{ item.publ_year }}<br>Count: {{ item.count }}<br>Author Id: {{ item.author_id }}<br>
+            Author: {{ item.author.first_name }} {{ item.author.last_name }}
+        {% endfor %}
+    </div>
+{% endblock %}
