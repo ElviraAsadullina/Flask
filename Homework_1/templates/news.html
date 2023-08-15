@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<table class="table">
+  <thead class="table-dark align-middle">
+    <tr>
+        <th style="text-align: center !important ">Дата публикации</th>
+        <th style="text-align: center !important">Заголовок</th>
+        <th style="text-align: center !important">Анонс новости</th>
+    </tr>
+    </thead>
+    <tbody>
+    {% for item in context %}
+        <tr class="align-middle">
+            <td>{{ item.publish_date }}</td>
+            <td>{{ item.news_header }}</td>
+            <td>{{ item.news_anons }}</td>
+        </tr>
+    {% endfor %}
+    </tbody>
+</table>
+{%  endblock %}

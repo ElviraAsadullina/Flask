@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% block content %}
+{% for item in context %}
+    <div class="card bg-dark text-uppercase">
+        <div class="card-img-overlay">
+            <h5 class="card-title">Товары из категории {{ item.category }}</h5>
+            <p class="card-text">{{ item.description }}</p>
+            {% for content in item.content %}
+                {% if not content == [] %}
+                    <p class="card-text">{{ content.name }}, {{ content.description }} всего за {{ content.price }} рублей</p>
+                {% else %}
+                    <!-- TODO: Не отрабатывает условие if-else для пустого списка -->
+                    <p class="card-text">Товары данной категории отсутствуют</p>
+                {% endif %}
+            {% endfor %}
+            <a href="{{ item.url }}" class="btn btn-danger">Перейти в категорию {{ item.category }}</a>
+        </div>
+        <img src="https://dummyimage.com/800x200/969196/fff.png&text=image" class="card-img" alt="{{ item.category }}">
+    </div>
+{% endfor %}
+{% endblock %}
