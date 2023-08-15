@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    {% for item in context %}
+        {% if product == item.url %}
+            {% for content in item.content %}
+                {% if not content == null %}
+                    <h1>Данные о товаре {{ content.name }}</h1>
+                    <p>Категория: {{ item.category }}<br>
+                       Наименование: {{ content.name }}<br>
+                       Описание: {{ content.description }}<br>
+                       Стоимость: {{ content.price }}</p>
+                {% else %}
+                    <p class="h2">Товары данной категории отсутствуют</p>
+                {% endif %}
+            {% endfor %}
+        {% endif %}
+    {% endfor %}
+{% endblock %}
