@@ -1,0 +1,43 @@
+header, footer {
+    position: sticky;
+    top: 0;
+    padding: 10px;
+    z-index: 1000;
+    background: #fff;
+    -webkit-box-shadow: 0 5px 25px rgba(0, 0, 0, 0.15);
+        box-shadow: 0 5px 25px rgba(0, 0, 0, 0.15);
+}
+
+/*.container-footer {*/
+/*    position: fixed;*/
+/*    bottom: 0px;*/
+/*    margin-bottom: 20px;*/
+/*    z-index: 1000;*/
+/*    background: #fff;*/
+/*    -webkit-box-shadow: 0 5px 25px rgba(0, 0, 0, 0.15);*/
+/*        box-shadow: 0 5px 25px rgba(0, 0, 0, 0.15);*/
+/*}*/
+
+.header-img {
+    width: 60px;
+}
+
+.footer-img {
+    width: 30px;
+}
+
+.container-head {
+    background-color: #ff0c86;
+}
+
+.button-register {
+    margin-top: 20px;
+    border-radius: 7px;
+    border: #88154d;
+    background-color: rgba(255,90,110,0.77);
+    box-shadow: -1px 4px 12px #88154d;
+}
+
+.greeting {
+    color: #88154d;
+}
